@@ -1,0 +1,94 @@
+Barren Moore
+Description
+Simple text adventure called "The adventure of the barren moor"
+In "The adventure of the barren moor" the player is in the middle of an infinite grey swamp. This grey swamp has few distinguishing characteristics, other than the fact that it is large and infinite and dreary. However, the player DOES have a magic compass that tells the player how far away the next feature of interest is.
+The player can go north,south,east,or west.
+Here is an example playthrough you might create
+You awaken to find yourself in a barren moor.  Try "look"
+> look
+Grey foggy clouds float oppressively close to you,
+reflected in the murky grey water which reaches up your shins.
+Some black plants barely poke out of the shallow water.
+Try "north","south","east",or "west"
+You notice a small watch-like device in your left hand. 
+It has hands like a watch, but the hands don't seem to tell time.
+ 
+The dial reads '5m'
+>north
+The dial reads '4.472m'
+>north
+The dial reads '1m'
+>e
+ 
+You see a box sitting on the plain.   Its filled with treasure!  You win!  The end.
+
+
+
+Additional Code:
+		
+		TheBeginning X = new TheBeginning();
+		Grid Y = new Grid();
+		Compass C = new Compass();
+		Player P = new Player();
+		TheEnd G = new TheEnd();
+		
+		X.Narration();
+		
+		
+		System.out.println("\n\n");
+	
+
+	}
+
+
+More Additional Code:
+
+
+
+public class TheBeginning {
+	
+	public void Narration() {
+		System.out.println("You awake to a sharp pain! \n"
+				+ "You sit bolt upright smacking your head on something hard, dazing yourself slightly. In an attempt to understand your surroundings better, you try and feel out your surroundings."
+				+ " \nYour hands touch the ground you are on and begin to search."
+				+ " The ground feel soft and wet. Upon further exploration, your hands brush against small patches of grass and dip into pools of frigid water."
+				+"\nHaving explored the ground, you reach up and find the object you hit your head on."
+				+ "\nYou find the object with your hands and begin to feel it. It's cold and solid, almost rock-like in its texture. You can't quite figure out what it is through touch alone."
+				+"\nWould you like to open your eyes: (y/n)");
+		
+		input = keyboard.nextLine();
+	}
+
+}
+
+Extra code:
+
+
+public void Narration() {
+		System.out.println("You awake to a sharp pain! \n"
+				+ "You sit bolt upright smacking your head on something hard, dazing yourself slightly. In an attempt to understand your surroundings better, you try and feel out your surroundings."
+				+ " \nYour hands touch the ground you are on and begin to search."
+				+ " The ground feel soft and wet. Upon further exploration, your hands brush against small patches of grass and dip into pools of frigid water."
+				+"\nHaving explored the ground, you reach up and find the object you hit your head on."
+				+ "\nYou find the object with your hands and begin to feel it. It's cold and solid, almost rock-like in its texture. You can't quite figure out what it is through touch alone."
+				+"\nWould you like to open your eyes: (y/n)");
+		
+		input = keyboard.nextLine();
+		answer = input;
+		
+		switch(answer) {
+		case "n":
+			System.out.println("\n... Wow... really? Okay, fine. You keep your eyes firmly shut because the world is scary and you want nothing to do with it. You get off your lazy butt and "
+					+ "stumble around for a bit before tripping,\n"
+					+ " falling down, and knocking yourself unconscious"
+					+ "with your own wildly flailing arms.\n"
+					+ "You die from dehydration, starvation, and sheer stupidity. Congratulations.\n ---------GAME OVER---------");
+			break;
+		case "y":
+			System.out.println("\nYou open your eyes to see a small wooden sign. Not rock. Wood. You really should work on your detective skills there, Sherlock."
+					+ "\nLooking around, you find that you are in the middle of an enormous moor or bog. It seems to stretch on for miles in any direction and you start to wonder why you are here."
+					+ "\nInspecting yourself, you notice a small, watch-like apparatus on your left arm. Upon further inspection you find it to be some kind of a compass, though spinning wildly in a circle."
+					+ "\nHaving exhausted all possible ideas in your tiny head the only left to do is for me to ask you want to read the sign in front of you that you seem to have forgotten about, because apparently"
+					+ "as an omniscient being I have all the time in the world.\n" + "So, would you like to read the sign? (y/n)");
+			break;
+		}
